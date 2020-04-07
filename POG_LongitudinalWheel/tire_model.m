@@ -17,38 +17,14 @@
  %%%% SIMULATION OF SYSTEM: POG_Car_Dumper_SS
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  %%%%%%%%%%%%   SYSTEM PARAMETERS  %%%%%%%%%%%%%%%%%%%%%%%%%%
- M=300*kg;                  % 2. Mass. Internal parameter.
- K_d=3000*Newton/(5*cm);    % 3. Stiffness. Internal parameter.
- b_d=200*Newton/(10*cm/sec);% 4. Friction. Internal parameter.
- m=22*kg;                   % 5. Mass. Internal parameter.
- K_p=3000*Newton/(2*cm);    % 7. Stiffness. Internal parameter.
- Xp_In  = [     -7   -6      0  10]*cm;
- Fp_Out = [-16*K_p   -6*K_p  0   0]*cm;
- %Fp_Out = [0   0  0   0]*cm;
- b_p=1*Newton/(10*cm/sec);   % 8. Friction. Internal parameter.
- %%%%%%%%%%%%   INPUT VALUES  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- F_M=-M*g_acc;              % 1. Force. Input value.
- F_m = m*g_acc;              % 6. Force. Input value.
- v_g_t=[ 0                       0; ...
-         2           0*cm/(0.1*sec); ...
-         2.1                      0; ...
-         3.9        -0*cm/(0.1*sec); ...
-         4.0                      0; ...
-         20.0                      0; ...
-         ];            % 9. Ground Velocity.
- %%%%%%%%%%%%   INITIAL CONDITIONS  %%%%%%%%%%%%%%%%%%%%%%%%%
- P_2_0=0;       % 2. Momentum. Initial condition. 
- L_0=25*cm;     % 3. Displacement. Initial condition. 
- P_5_0=0;       % 5. Momentum. Initial c    ondition. 
- l_0=10*cm;     % 7. Displacement. Initial condition. 
- r_0=30*cm;     % Wheel Radius
- R1 = 0.05*meters;   % RAPPORTO 
- rho = 1.225; % kg/m^3
- A = 2; %m^2
- C_d = 0.82; %long cylinder shape
- g = 9.81; %m/s^2 acceleration g
- r = 0.3; % wheel radius
- b_a = 0.8; %friction asphalt
+ P_4_0=0;                    % 1. Momentum. Initial condition.
+ M=1300*kg;                  % 2. Mass. Internal parameter.
+ rho = 1.225*(kg/(meters^3));     % Density of air
+ A = 1452*mm*1799*mm;        % Front area of Volkswagen Golf
+ C_d = 0.27;                 % Drag coeff of Volkswagen Golf
+ g = 9.81*(meters/(sec^2));         % Gravity acceleration
+ r_w = 32*cm;                % wheel radius
+ c_roll = 0.0125;            %ordinary tyre on concrete. Note: it is indicative as the real number varies
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  Tfin=10;
  Nr_Ts_Points=2000;
