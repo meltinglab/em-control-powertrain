@@ -13,10 +13,10 @@ Henry=Volt*sec/Amp; mHenry=0.001*Henry; Joule=1; kJoule=1000*Joule;
 K=1; Celsius=1;  Pa=1; atm=101325*Pa;  mol=1; Farad=1;
 
 % Parameters for the battery
-Cap_initial = 10;     %[Ah] 
-Cap_rated = 100;        %[Ah]
-N_cell_series = 100;
-N_cell_parallel = 1;
+Cap_initial = 50;     %[Ah] 
+Cap_rated = 3;        %[Ah]
+N_cell_series = 111;
+N_cell_parallel = 16;
 
 % Parameters for the controller
 pwm_switch_period=2e-5;
@@ -53,5 +53,9 @@ C_d = 0.27;                 % Drag coeff of Volkswagen Golf
 g = 9.81*(meters/(sec^2));         % Gravity acceleration
 r_w = 32*cm;                % wheel radius
 c_roll = 0.0125;            %ordinary tyre on concrete. Note: it is indicative as the real number varies
+
+ x_in = [ 0 12 38 65 78 100 112 138 165 178 200]*meters;         %Distances of sampling.
+ slope_out = tan(-0.3*[ 0  0  0  0  0  0  0  0  0  0 0]*degrees);    %Sampled slopes at the distances above.
+ %slope_out = 4*tan(-0.3*[ 0  5 12  5  -5 -12 -10 10  5   0 0]*degrees);    %Sampled slopes at the distances above.
 
 

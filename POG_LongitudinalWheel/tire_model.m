@@ -25,6 +25,10 @@
  g = 9.81*(meters/(sec^2));         % Gravity acceleration
  r_w = 32*cm;                % wheel radius
  c_roll = 0.0125;            %ordinary tyre on concrete. Note: it is indicative as the real number varies
+ 
+ x_in = [ 0 12 38 65 78 100 112 138 165 178 200]*meters;         %Distances of sampling.
+ slope_out = tan(-0.3*[ 0  0  0  0  0  0  0  0  0  0 0]*degrees);    %Sampled slopes at the distances above.
+ %slope_out = 4*tan(-0.3*[ 0  5 12  5  -5 -12 -10 10  5   0 0]*degrees);    %Sampled slopes at the distances above.
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  Tfin=10;
  Nr_Ts_Points=2000;
