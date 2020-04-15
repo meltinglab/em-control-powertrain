@@ -13,10 +13,10 @@ Henry=Volt*sec/Amp; mHenry=0.001*Henry; Joule=1; kJoule=1000*Joule;
 K=1; Celsius=1;  Pa=1; atm=101325*Pa;  mol=1; Farad=1;
 
 % Parameters for the battery
-Cap_initial = 50;     %[Ah] 
+Cap_initial = 75;     %[Ah] 
 Cap_rated = 3;        %[Ah]
-N_cell_series = 111;
-N_cell_parallel = 16;
+N_cell_series = 138;
+N_cell_parallel = 24;
 
 % Parameters for the controller
 pwm_switch_period=2e-5;
