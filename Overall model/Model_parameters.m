@@ -13,10 +13,10 @@ Henry=Volt*sec/Amp; mHenry=0.001*Henry; Joule=1; kJoule=1000*Joule;
 K=1; Celsius=1;  Pa=1; atm=101325*Pa;  mol=1; Farad=1;
 
 %% BATTERY
-Cap_initial = 10;                   % Initial Battery capacitance. [Ah] 
-Cap_rated = 100;                    % Rated Battery capacitance. [Ah]
-N_cell_series = 100;                % Number of cells in series.
-N_cell_parallel = 1;                % Number of cells in parallel.
+Cap_initial = 75.8;                   % Initial Battery capacitance. [Ah] 
+Cap_rated = 3;                    % Rated Battery capacitance. [Ah]
+N_cell_series = 149;                % Number of cells in series.
+N_cell_parallel = 25;                % Number of cells in parallel.
 
 %% CONTROLLER
 pwm_switch_period = 2e-5;           % PWM control switching frequency.
