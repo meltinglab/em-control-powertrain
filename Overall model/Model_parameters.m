@@ -40,10 +40,18 @@ max_torque_motor = 250*Nm;          % Max torque deliverable by the motor.
 P_2_0 = 0;                          % Angular momentum. Initial condition.  
 x_5_0 = 0;                          % Displacement. Initial condition.
 
-%% GEARBOX
+%% GEARBOX AND DRIVETRAIN
 K_rg = 10^13*(Newton/meters);       % Translational stiffness of the gear matching.
 b_rg = 4.924e-4;                    % Translational friction coefficient of the gear matching.
 r_g = 9.7*r_r;                      % Gearbox transmission ratio: 9.7. Usual choice in most common electric vehicles. 
+
+J_dt = 0.016*kg*meters^2;           % Transmission inertia.
+b_dt = 3e-4;                        % Transmission angular friction coefficient.
+K_dt = 10^6*(Nm/rad);               % Transmission rotational compliance.
+
+% Initial conditions
+P_3_0 = 0;                          % Angular momentum of the shaft. Initial condition.  
+w_6_0 = 0;                          % Angular displacement of the shaft. Initial condition.
 
 %% VEHICLE DYNAMICS - FORCES
 
