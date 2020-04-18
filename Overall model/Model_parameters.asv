@@ -65,7 +65,7 @@ c_roll = 0.0125;                    % Rolling coeffcient: ordinary tyre on concr
 % Initial conditions
 P_4_0 = 0;                          % Car momentum of inertia. Initial condition.
 
-%% ROAD PROFILE
+%% SAMPLING
 x_in = [ 0 12 38 65 78 100 112 138 165 178 200]*meters;                         %Distances of sampling.
-slope_out = tan(-0.3*[ 0  0  0  0  0  0  0  0  0  0 0]*degrees);                %Flat-street profile.
+%slope_out = tan(-0.3*[ 0  0  0  0  0  0  0  0  0  0 0]*degrees);               %Flat-street profile.
 %slope_out = 4*tan(-0.3*[ 0  5 12  5  -5 -12 -10 10  5   0 0]*degrees);         %Street with variable slope during the simulation.
