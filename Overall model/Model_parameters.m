@@ -31,7 +31,6 @@ R_s = 4.23*mOhm;                    % Stator resistance.
 L_s_d = 0.171*mHenry;               % d-axis stator inductance.
 L_s_q = 0.391*mHenry;               % q-axis stator inductance.
 L_s = 0.391*mHenry;                 % Stator inductance.
-np = 12;                            % Number of poles.
 pp = 4;                             % Number of pole-pairs.
 lambda_pm = 0.1039*Weber;           % Permanent flux linkage constant.
 max_torque_motor = 250*Nm;          % Max torque deliverable by the motor.
